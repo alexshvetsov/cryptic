@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Cryptonic</title>
+    <!-- 1. Bootstrap CSS: -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- 2. Our CSS: -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- 3. jQuery Library: -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+    <!-- 4. Popper Library: -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+
+    <!-- 5. Bootstrap JavaScript: -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src='jquery-3.4.1.js'></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="fixed">
+
+            <div class="parallax">
+                <h1 class="display-3">Cryptonic</h1>
+            </div>
+            <nav class="navbar navbar-expand-md navbar-light bg-light">
+                <a id="home" class="navbar-brand" href="#">Home</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a id="live" class="nav-link" href="javascript:;">Live reports</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="about" class="nav-link" href="javascript:;">About</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input id="searchCurrency" class="form-control mr-sm-2" type="search" placeholder="Search"
+                            aria-label="Search">
+                        <button id="searchBtn" type="button"
+                            class="btn btn-outline-success my-2 my-sm-0">Search</button>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div id="spinner">
+        <img  src="./assets//images/spinner.gif" alt="spinner">
+    </div>
+
+    <main class="row mainArea">
+
+        <div id="chartContainer" style="height: 500px; width: 100%;"></div>
+    </main>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="chartContainer" style="height: 500px; width: 100%;"></div>
+                    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+                    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" role="button" data-dismiss="modal">Close</button>
+                    <button id="save" type="button" class="btn btn-primary" role="button" data-dismiss="modal">Save
+                        changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
